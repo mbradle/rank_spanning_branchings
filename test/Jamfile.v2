@@ -1,0 +1,1 @@
+exe rank_branchings_test : rank_branchings_test.cpp : <include>/opt/local/include ;

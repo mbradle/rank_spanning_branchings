@@ -1,0 +1,10 @@
+exe rank-branchings1 :
+    rank-branchings1.cpp :
+    <include>/opt/local/include
+    ;
+
+exe rank-branchings2 :
+    rank-branchings2.cpp :
+    <include>/opt/local/include
+    ;
+

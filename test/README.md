@@ -1,7 +1,7 @@
 # Running a test.
 
 To run a test of the *rank_spanning_branchings()* routine, first compile with
-Boost, which you must have installed and built the *b2* code.  If you install
+[Boost](https://www.boost.org), which you must have installed and built the [b2](https://github.com/boostorg/wiki/wiki/Getting-Started%3A-Overview) code.  If you install
 boost off of your home directory, you can type, for example in a bash-like
 shell,
 

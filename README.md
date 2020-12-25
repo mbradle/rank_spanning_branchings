@@ -4,6 +4,8 @@
 
 <tt>rank_spanning_branchings()</tt> is a routine to compute, in order, the optimal branchings in a directed graph.  It is implemented as a C++ header file that can be included in other code.  Because it uses variadic templates and default template arguments for a function template, it requires [C++11](https://en.wikipedia.org/wiki/C%2B%2B11), or a later version of C++.
 
+The routine uses the [Camerini et al.](https://onlinelibrary.wiley.com/doi/abs/10.1002/net.3230100202) algorithm to compute the branchings in order by branching weight.  Once the routine finds a branching, the routine calls a user-supplied BranchingProcessor to process the branching and then moves on to find the next branching.  This [page](https://github.com/mbradle/rank_spanning_branchings/wiki/Algorithm-Description) provides details of the algorithm.
+
 ## Prototype
 
 The prototype for <tt>rank_spanning_branchings()</tt> is

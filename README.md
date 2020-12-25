@@ -2,11 +2,11 @@
 
 ## Overview
 
-*rank_spanning_branchings()* is a routine to compute, in order, the optimal branchings in a directed graph.  It is implemented as a C++ header file that can be included in other code.  Because it uses variadic templates and default template arguments for a function template, it requires [C++11](https://en.wikipedia.org/wiki/C%2B%2B11), or a later version of C++.
+<tt>rank_spanning_branchings()</tt> is a routine to compute, in order, the optimal branchings in a directed graph.  It is implemented as a C++ header file that can be included in other code.  Because it uses variadic templates and default template arguments for a function template, it requires [C++11](https://en.wikipedia.org/wiki/C%2B%2B11), or a later version of C++.
 
 ## Prototype
 
-The prototype for *rank_spanning_branchings()* is
+The prototype for <tt>rank_spanning_branchings()</tt> is
 
           template <template<class...> class PriorityQueue = boost::heap::fibonacci_heap,
             typename Graph, typename BranchingProcessor,
@@ -47,7 +47,7 @@ IN: *distance_compare(CompareFunction cmp)*
 
 ## BranchingProcessor
 
-BranchingProcessor is used in the *rank_spanning_branchings()* function to process the current branching.  It is a functor that is called with a [Boost Filtered Graph](https://www.boost.org/doc/libs/1_75_0/libs/graph/doc/filtered_graph.html) view of the parent graph.  The processor must return a boolean.  If the return value is true, *rank_spanning_branchings()* continues and seeks the next branching. If the return value is false, *rank_spanning_branchings()* stops.
+BranchingProcessor is used in the <tt>rank_spanning_branchings()</tt> function to process the current branching.  It is a functor that is called with a [Boost Filtered Graph](https://www.boost.org/doc/libs/1_75_0/libs/graph/doc/filtered_graph.html) view of the parent graph.  The processor must return a boolean.  If the return value is true, <tt>rank_spanning_branchings()</tt> continues and seeks the next branching. If the return value is false, <tt>rank_spanning_branchings()</tt> stops.
 
 The following functor is an example BranchingProcessor that prints out the edges in a branching:
 
@@ -69,7 +69,7 @@ The following functor is an example BranchingProcessor that prints out the edges
       }
     };
     
-It returns true, so *rank_spanning_branchings()* would always continue on to find the next branching.
+It returns true, so <tt>rank_spanning_branchings()</tt> would always continue on to find the next branching.
 
 ## Complexity
 
@@ -77,12 +77,12 @@ The time complexity of the routine is *O(kE log V)*, where *k* is the number of 
 
 ## Example
 
-The example directory included with this distribution contains several example codes that show how to use *rank_spanning_branchings()*.
+The example directory included with this distribution contains several example codes that show how to use <tt>rank_spanning_branchings()</tt>.
 
 
 ## Acknowledgments
 
-The development of *rank_spanning_branchings()* was inspired by the [C++ implementation](http://edmonds-alg.sourceforge.net) of Edmond's algorithm by Ali Tofigh and Erik Sj&ouml;lund.
+The development of <tt>rank_spanning_branchings()</tt> was inspired by the [C++ implementation](http://edmonds-alg.sourceforge.net) of Edmond's algorithm by Ali Tofigh and Erik Sj&ouml;lund.
 
 
 Copyright &copy; 2015-2021 Clemson University, [Bradley S. Meyer](mailto:mbradle@clemson.edu).

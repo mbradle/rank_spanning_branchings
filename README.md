@@ -56,7 +56,7 @@ The following functor is an example BranchingProcessor that prints out the edges
 
       print_branching() {}
 
-      template&lt;class BranchingGraph&gt;
+      template<class BranchingGraph>
       bool operator()( const BranchingGraph& bg )
       {
         std::cout << "Branching:";

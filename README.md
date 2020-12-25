@@ -35,7 +35,7 @@ IN: *BranchingProcessor bp*
 
 IN: *weight_map(WeightMap w_map)*
 
->The weight or "length" of each edge in the graph. The *WeightMap* type must be a model of [ReadablePropertyMap](https://www.boost.org/doc/libs/1_75_0/libs/property_map/doc/ReadablePropertyMap.html).  If no edge weight comparison function is supplied, its value type must be [Less Than Comparable](http://www.sgi.com/tech/stl/LessThanComparable.html). The key type of this map needs to be the graph's edge descriptor type. Default: *get(edge_weight, g)*.
+>The weight or "length" of each edge in the graph. The *WeightMap* type must be a model of [ReadablePropertyMap](https://www.boost.org/doc/libs/1_75_0/libs/property_map/doc/ReadablePropertyMap.html).  If no edge weight comparison function is supplied, its value type must be [Less Than Comparable](https://www.boost.org/sgi/stl/LessThanComparable.html). The key type of this map needs to be the graph's edge descriptor type. Default: *get(edge_weight, g)*.
 
 IN: *vertex_index_map(VertexIndexMap i_map)*
 
@@ -43,7 +43,7 @@ IN: *vertex_index_map(VertexIndexMap i_map)*
 
 IN: *distance_compare(CompareFunction cmp)*
 
->This function is used to compare edge weights to determine which edges to include in the next best branching.  It is also used to compare the weights of branchings.  The weight of a branching is the sum of weights of its edges. The *CompareFunction* type must be a model of [Binary Predicate](http://www.sgi.com/tech/stl/BinaryPredicate.html) and have argument types that match the value type of the *WeightMap* property map. Default: *std::less&lt;W&gt;* with *W=typename property_traits&lt;WeightMap&gt;::value_type*.
+>This function is used to compare edge weights to determine which edges to include in the next best branching.  It is also used to compare the weights of branchings.  The weight of a branching is the sum of weights of its edges. The *CompareFunction* type must be a model of [Binary Predicate](https://www.boost.org/sgi/stl/BinaryPredicate.html) and have argument types that match the value type of the *WeightMap* property map. Default: *std::less&lt;W&gt;* with *W=typename property_traits&lt;WeightMap&gt;::value_type*.
 
 ## BranchingProcessor
 

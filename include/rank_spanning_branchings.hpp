@@ -1,5 +1,5 @@
 ///=======================================================================
-// Copyright 2015-2018 Clemson University
+// Copyright 2015-2020 Clemson University
 // Authors: Bradley S. Meyer
 //
 // Distributed under the Boost Software License, Version 1.0. (See

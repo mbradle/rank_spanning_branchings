@@ -29,7 +29,7 @@ IN: *const Graph&amp; g*
 
 IN: *BranchingProcessor bp*
 
->A functor that models BranchingProcessor to process the edges in a branching.
+>A functor that models [BranchingProcessor](#branchingprocessor) to process the edges in a branching.
 
 ### Named Parameters
 

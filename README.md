@@ -83,7 +83,7 @@ The time complexity of the routine is *O(kE log V)*, where *k* is the number of 
 
 ## Example
 
-The example directory included with this distribution contains several example codes that show how to use <tt>rank_spanning_branchings()</tt>.
+The [example directory](https://github.com/mbradle/rank_spanning_branchings/tree/main/example) included with this distribution contains several example codes that show how to use <tt>rank_spanning_branchings()</tt>.
 
 
 ## Acknowledgments

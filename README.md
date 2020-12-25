@@ -6,6 +6,10 @@
 
 The routine uses the [Camerini et al.](https://onlinelibrary.wiley.com/doi/abs/10.1002/net.3230100202) algorithm to compute the branchings in order by branching weight.  Once the routine finds a branching, the routine calls a user-supplied BranchingProcessor to process the branching and then moves on to find the next branching.  This [page](https://github.com/mbradle/rank_spanning_branchings/wiki/Algorithm-Description) provides details of the algorithm.
 
+## Namespace
+
+<tt>rank_spanning_branchings()</tt> is in its own namespace <tt>rsb</tt>.
+
 ## Prototype
 
 The prototype for <tt>rank_spanning_branchings()</tt> is

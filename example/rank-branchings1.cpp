@@ -88,7 +88,7 @@ main()
   std::cout << "Spanning branchings in descending order of weight:"
             << std::endl << std::endl;
 
-  boost::rank_spanning_branchings(
+  rsb::rank_spanning_branchings(
     g,
     print_branching()
   );
@@ -101,7 +101,7 @@ main()
   std::cout << "Spanning branchings in ascending order of weight:"
             << std::endl << std::endl;
 
-  boost::rank_spanning_branchings(
+  rsb::rank_spanning_branchings(
     g,
     print_branching(),
     boost::distance_compare( std::greater<int>() )

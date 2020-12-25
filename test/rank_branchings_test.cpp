@@ -462,7 +462,7 @@ void test_int_graph( base_generator_type& gen, size_t n, Compare comp )
     branching_heap.push( branchings[i] );
   }
 
-  rank_spanning_branchings<boost::heap::pairing_heap>(
+  rsb::rank_spanning_branchings<boost::heap::pairing_heap>(
     g,
     set_rank_vector<Graph,Edge>( rank_vector ),
     distance_compare( comp )
@@ -560,7 +560,7 @@ void test_real_graph( base_generator_type& gen, size_t n, Compare comp )
   // Call explicitly with named parameters to test.  Also use a skew_heap
   // in routine.
 
-  rank_spanning_branchings<boost::heap::skew_heap>(
+  rsb::rank_spanning_branchings<boost::heap::skew_heap>(
     g,
     set_rank_vector<Graph, Edge>( rank_vector ),
     distance_compare( comp ).
@@ -660,7 +660,7 @@ void test_class_graph( base_generator_type& gen, size_t n, Compare comp )
 
   // Call explicitly with named parameters to test.
 
-  rank_spanning_branchings(
+  rsb::rank_spanning_branchings(
     g,
     set_rank_vector<Graph, Edge>( rank_vector ),
     distance_compare( comp ).

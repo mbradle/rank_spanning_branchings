@@ -6,8 +6,8 @@
 // accompanying file LICENSE_1_0.txt or copy at
 // http://www.boost.org/LICENSE_1_0.txt)
 //=======================================================================
-#ifndef BOOST_GRAPH_RANK_SPANNING_BRANCHINGS_HPP
-#define BOOST_GRAPH_RANK_SPANNING_BRANCHINGS_HPP
+#ifndef RANK_SPANNING_BRANCHINGS_HPP
+#define RANK_SPANNING_BRANCHINGS_HPP
 
 /*
  * Rank spanning branchings
@@ -34,7 +34,9 @@
 #include <boost/optional.hpp>
 #include <boost/unordered_set.hpp>
 
-namespace boost {
+using namespace boost;
+
+namespace rsb {
 
   namespace detail {
 
@@ -1239,6 +1241,6 @@ namespace boost {
 
   }
 
-} // namespace boost
+} // namespace rsb
 
-#endif // BOOST_GRAPH_RANK_SPANNING_BRANCHINGS_HPP
+#endif // RANK_SPANNING_BRANCHINGS_HPP

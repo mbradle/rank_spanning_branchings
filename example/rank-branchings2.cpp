@@ -221,7 +221,7 @@ int main( int argc, char **argv )
 
   std::cout << std::endl;
 
-  rank_spanning_branchings(
+  rsb::rank_spanning_branchings(
     g,
     my_function<Graph>(
       max_weight,

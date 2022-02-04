@@ -88,7 +88,7 @@ The [example directory](https://github.com/mbradle/rank_spanning_branchings/tree
 
 ## Acknowledgments
 
-The development of <tt>rank_spanning_branchings()</tt> was inspired by the [C++ implementation](http://edmonds-alg.sourceforge.net) of Edmond's algorithm by Ali Tofigh and Erik Sj&ouml;lund.
+The development of <tt>rank_spanning_branchings()</tt> was inspired by the [C++ implementation](http://edmonds-alg.sourceforge.net) of Edmond's algorithm by Ali Tofigh and Erik Sj&ouml;lund.  Development of this software was supported by NASA grant 80NSSC20K0338.
 
 
 Copyright &copy; 2015-2021 Clemson University, [Bradley S. Meyer](mailto:mbradle@clemson.edu).

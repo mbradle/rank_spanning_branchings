@@ -8,3 +8,8 @@ exe rank-branchings2 :
     <include>/opt/local/include
     ;
 
+exe rank-branchings3 :
+    rank-branchings3.cpp :
+    <include>/opt/local/include
+    ;
+

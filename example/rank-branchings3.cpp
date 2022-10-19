@@ -63,6 +63,10 @@ class Matrix
       return mData[i * mCols + j];
     }
 
+    size_t get_num_rows() { return mRows; }
+
+    size_t get_num_cols() { return mCols; }
+
   private:
     size_t mRows;
     size_t mCols;
@@ -108,8 +112,8 @@ class my_function
     typedef
       typename property_traits<WeightMap>::value_type weight_t;
 
-    my_function( weight_t& _max_weight, weight_t _cut, Matrix &matrix ) :
-      max_weight( _max_weight ), cut( _cut ), m_matrix( matrix )
+    my_function( weight_t& _max_weight, weight_t _cut, std::vector<Matrix>& v_Matrix ) :
+      max_weight( _max_weight ), cut( _cut ), m_v_Matrix( v_Matrix )
     {}
 
     template<class BranchingGraph>
@@ -146,8 +150,14 @@ class my_function
         if( name_map[v] == "root" ) { root = v; }
       }
 
-      dfs_my_visitor vis( m_matrix, exp( d_diff ) );
+      size_t n = num_vertices( bg );
+
+      Matrix matrix( n, n );
+
+      dfs_my_visitor vis( matrix, exp( d_diff ) );
       depth_first_search( bg, visitor( vis ).root_vertex( root ) );
+
+      m_v_Matrix.push_back( matrix );
 
       return true;
 
@@ -157,7 +167,7 @@ class my_function
     weight_t& max_weight;
     weight_t cut;
     weight_t d_diff;
-    Matrix& m_matrix;
+    std::vector<Matrix>& m_v_Matrix;
 
 };
    
@@ -284,25 +294,29 @@ int main( int argc, char **argv )
     r_map[index_map[v]] = name_map[v];
   }
 
-  size_t n = num_vertices( g );
-
-  Matrix a( n, n );
+  std::vector<Matrix> v_Matrix;
 
   rsb::rank_spanning_branchings(
     g,
     my_function<Graph>(
       max_weight,
       lexical_cast<my_type>( argv[2] ),
-      a
+      v_Matrix
     )
   );
 
-  for( size_t i = 0; i < n; i++ )
+  for( size_t n = 0; n < v_Matrix.size(); n++ )
   {
-     for( size_t j = 0; j < n; j++ )
-     {
-       std::cout << r_map[i] << "  " << r_map[j] << "  " << a.get( i, j ) << std::endl;
-     }
+    for( size_t i = 0; i < v_Matrix[n].get_num_rows(); i++ )
+    {
+       for( size_t j = 0; j < v_Matrix[n].get_num_cols(); j++ )
+       {
+         std::cout << r_map[i] << "  " << r_map[j] << "  " <<
+           v_Matrix[n].get( i, j ) << std::endl;
+//         std::cout << i << "  " << j << "  " << v_Matrix[n].get( i, j ) << std::endl;
+       }
+    }
+    std::cout << std::endl;
   }
 
   return EXIT_SUCCESS;

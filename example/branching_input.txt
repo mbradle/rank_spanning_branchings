@@ -10,7 +10,7 @@ v 3, v 4, 3
 v 4, v 1, -2
 v 4, v 2, 7
 v 4, v 3, 1
-root, v 1, 0
-root, v 2, 0
-root, v 3, 0
-root, v 4, 0
+root, v 1, 1
+root, v 2, 1
+root, v 3, 1
+root, v 4, 1
